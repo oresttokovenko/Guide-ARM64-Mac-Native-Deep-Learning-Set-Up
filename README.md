@@ -21,17 +21,17 @@ There are somethings that I assume you have already done/know how to do at this 
     3. `pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/grpcio-1.33.2-cp38-cp38-macosx_11_0_arm64.whl"`
     4. `pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/h5py-2.10.0-cp38-cp38-macosx_11_0_arm64.whl"`
     5. `pip install --upgrade -t "$env/lib/python3.8/site-packages/" --no-dependencies --force "$libs/tensorflow_addons-0.11.2+mlcompute-cp38-cp38-macosx_11_0_arm64.whl"`
-    6. `conda install -c conda-forge -y absl-py
-    7. `conda install -c conda-forge -y astunparse
-    8. `conda install -c conda-forge -y gast
-    9. `conda install -c conda-forge -y opt_einsum
-    10. `conda install -c conda-forge -y termcolor
-    11. `conda install -c conda-forge -y typing_extensions
-    12. `conda install -c conda-forge -y wheel
-    13. `conda install -c conda-forge -y typeguard
-    14. `pip install wrapt flatbuffers tensorflow_estimator google_pasta keras_preprocessing protobuf
-    15. `pip install --upgrade -t “$env/lib/python3.8/site-packages/” --no-dependencies --force “$libs/tensorflow_macos-0.1a1-cp38-cp38-macosx_11_0_arm64.whl”
-    16. `pip install tensorboard 
+    6. `conda install -c conda-forge -y absl-py`
+    7. `conda install -c conda-forge -y astunparse`
+    8. `conda install -c conda-forge -y gast`
+    9. `conda install -c conda-forge -y opt_einsum`
+    10. `conda install -c conda-forge -y termcolor`
+    11. `conda install -c conda-forge -y typing_extensions`
+    12. `conda install -c conda-forge -y wheel`
+    13. `conda install -c conda-forge -y typeguard`
+    14. `pip install wrapt flatbuffers tensorflow_estimator google_pasta keras_preprocessing protobuf`
+    15. `pip install --upgrade -t “$env/lib/python3.8/site-packages/” --no-dependencies --force “$libs/tensorflow_macos-0.1a1-cp38-cp38-macosx_11_0_arm64.whl”`
+    16. `pip install tensorboard`
 
 7. open Jupyter notebook or lab and run `import tensorflow as tf` and check if successful. If you have issues refer to https://github.com/apple/tensorflow_macos/issues/48#issuecomment-766152769 for extra help
 
