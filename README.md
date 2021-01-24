@@ -3,16 +3,15 @@ How to set up a Deep Learning environment for the new ARM64 - M1 equipped Macs
 
 ## Part 1: MiniForge
 
-There are somethings that I assume you have already done/know how to do at this point. I assume your terminal is running in natively, and you know some basic BASH. Currently, MiniConda/Anaconda doesn't offer an Apple Silicon version so we need to install it. If you already have MiniConda/Anaconda enable view of hidden folders with `defaults write com.apple.finder AppleShowAllFiles true; killall Finder`, then navigate to `.anaconda` and delete it. I installed mine via homebrew so it might be there, or your home folder. Check your terminal and see if it says `(base)`. If not, then you successfully deleted it. Next you need to navigate to https://github.com/conda-forge/miniforge and download the Miniforge3-MacOSX-arm64 version. Navigate to the file in your Downloads using the Terminal and run `bash Miniforge3-MacOSX-arm64.sh`. Follow the installation prompt and check your terminal that you have `(base)`, then proceed to the next step. 
+There are somethings that I assume you have already done/know how to do at this point. I assume your terminal is running natively, and you know some basic BASH. Currently, MiniConda/Anaconda doesn't offer an Apple Silicon version so we need to uninstall it. Enable view of hidden folders with `defaults write com.apple.finder AppleShowAllFiles true; killall Finder`, then navigate to `.anaconda` and delete it. I installed mine via homebrew so it might be there, or your home folder. Check your terminal and see if it says `(base)` upon startup, you should not be able to activate any of your environments. If so, then you successfully deleted it. Next, you need to navigate to https://github.com/conda-forge/miniforge and download the Miniforge3-MacOSX-arm64 version. Navigate to the file in your Downloads using the Terminal and run `bash Miniforge3-MacOSX-arm64.sh`. Follow the installation prompt and check your terminal that you have `(base)`, then proceed to the next step. 
 
 ## Part 2: Tensorflow
 
-1. Create a conda environment with python 3.8 'conda create -n m1_tensorflow python=3.8'
-
-2. Download the latest zipped tar file from apple/tensorflow_macos: https://github.com/apple/tensorflow_macos/releases. This install is for version 0.1a1, so if you are installing a newer version at the time of following this guide, adjust that in the code in 6. XV.
-3. Unzip the tar file, I used the Mac unzip tool. Put it in your home directory where MiniForge is, or wherever you prefer. 
-4. Get the working directory of the 'arm64' folder within that folder, once there, type: `pwd` in the terminal. 
-5. Activate the m1 m1_tensorflow Set the following variables
+1. Create a conda environment with python 3.8 `conda create -n m1_tensorflow python=3.8`
+2. Download the latest zipped tar file from apple/tensorflow_macos: https://github.com/apple/tensorflow_macos/releases. This install is for version 0.1a1, so if you are installing a newer version at the time of following this guide, adjust that in the code in step 6. XV.
+3. Unzip the tar file, I used the native Mac unzip tool. Put it in your home directory, or wherever you prefer. 
+4. Get the working directory of the 'arm64' folder within that folder, once there, type: `pwd` in the terminal, and copy the output, you will neeed it for the next step. 
+5. Activate the m1_tensorflow environment and set the following variables
     1. `libs=(location of arm64 above)` (I used `libs=“/Users/oresttokovenko/tensorflow_macos/arm64/`)
     2. `env=(location of your python virtual environment)` (I used `env=“/Users/oresttokovenko/miniforge3/envs/m1_tensorflow`)
 6. Run the following commands in the m1_tensorflow conda environment. I spaced out the conda installs so that if there is an error, it will be easier to determine where that is. 
@@ -37,12 +36,9 @@ There are somethings that I assume you have already done/know how to do at this 
 
 ## Part 3: PyTorch
 
-1. Create a conda environment with python 3.8 'conda create -n m1_pytorch python=3.8'
-
+1. Create a conda environment with python 3.8 `conda create -n m1_pytorch python=3.8`
 2. run `conda install pytorch -c isuruf/label/pytorch -c conda-forge`
-
 3. run `conda install typing-extensions`
-
 4. open Jupyter notebook or lab and run `import torch` and check if successful. If you have issues refer to https://github.com/pytorch/pytorch/issues/48145 for extra help
 
 ## What doesn't yet work as of 01/23/2020 with MiniForge for ARM64 macOS
