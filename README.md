@@ -40,10 +40,10 @@ There are somethings that I assume you have already done/know how to do at this 
 2. run `conda install pytorch -c isuruf/label/pytorch -c conda-forge`
 3. run `conda install typing-extensions`
 4. open Jupyter notebook or lab and run `import torch` and check if successful. If you have issues refer to https://github.com/pytorch/pytorch/issues/48145 for extra help
-5. You can also install PyTorch Lightning and it will work using `pip install pytorch-lightning`
+5. Extra Step: Install PyTorch Lightning using `pip install pytorch-lightning`
+6. Extra Step: Install Torchvision using `conda install torchvision -c pytorch`
 
 ## What doesn't yet work as of 01/23/2020 with MiniForge for ARM64 macOS
 
 - scikit-learn surprise
 - xgboost
-- torchvision
