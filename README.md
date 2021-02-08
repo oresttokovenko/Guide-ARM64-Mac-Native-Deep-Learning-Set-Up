@@ -1,4 +1,4 @@
-# ARM64 Mac Native Deep Learning Set Up
+# Guide: ARM64 Mac Native Deep Learning Set Up
 How to set up a Deep Learning environment for the new ARM64 - M1 equipped Macs
 
 ## Part 1: MiniForge
